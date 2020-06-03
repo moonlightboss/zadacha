@@ -7,7 +7,7 @@ $dbname = "zadacha2_php";
 try{
 	$conn = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-	$sql= "CREATE TABLE `tablica` (
+	$sql= "CREATE TABLE `tablica1` (
   		`id` INT(11) NOT NULL,
   		`date` timestamp NOT NULL,
   		`text` text,
@@ -16,15 +16,15 @@ try{
 
 	$conn->exec($sql);
     echo "Таблица создана ";
-    $sql= "INSERT INTO `tablica` (`id`, `date`, `text`) VALUES ('1', '2020-06-03', 'Хорошая погода')";
+    $sql= "INSERT INTO `tablica1` (`id`, `date`, `text`) VALUES ('1', '2020-06-03', 'Хорошая погода')";
     $conn->exec($sql);
     echo " Запись 1 добавлена";
 
-    $sql= "INSERT INTO `tablica` (`id`, `date`, `text`) VALUES ('2', '2000-02-01', 'создал табличку')";
+    $sql= "INSERT INTO `tablica1` (`id`, `date`, `text`) VALUES ('2', '2000-02-01', 'создал табличку')";
     $conn->exec($sql);
     echo " Запись 2 добавлена";
 
-    $sql= "INSERT INTO `tablica` (`id`, `date`, `text`) VALUES ('3', '1999-01-23', 'и заполнил')";
+    $sql= "INSERT INTO `tablica1` (`id`, `date`, `text`) VALUES ('3', '1999-01-23', 'и заполнил')";
     $conn->exec($sql);
     echo " Запись 3 добавлена";
 	
